@@ -26,17 +26,15 @@ jobs:
         with:
           channel: "stable"
       - name: Decoding android/key.properties
+        env:
+          KEYPROP_PROD: ${{ secrets.KEYPROP_PROD }}
         run: |
-          echo "${{ secrets.KEYPROP_PROD }}" | base64 --decode > android/key.properties
-          if [ -f "android/key.properties" ]; then
-            echo "android/key.properties generated"
-          fi
+          echo "$KEYPROP_PROD" | base64 --decode > android/key.properties
       - name: Decoding android/key.jks
+        env:
+          KEYJKS_PROD: ${{ secrets.KEYJKS_PROD }}
         run: |
-          echo "${{ secrets.KEYJKS_PROD }}" | base64 --decode > android/key.jks
-          if [ -f "android/key.jks" ]; then
-            echo "android/key.jks generated"
-          fi
+          echo "$KEYJKS_PROD" | base64 --decode > android/key.jks
       - name: Pub Get Packages
         run: flutter pub get
       - name: Build APK
