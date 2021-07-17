@@ -24,15 +24,23 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v1
         with:
-          channel: 'stable'
+          channel: "stable"
       - name: Decoding android/key.properties
-        run: echo "${{ secrets.KEYPROP_PROD }}" | base64 --decode > android/key.properties
-      - name: Decoding android/neumodore_key.jks
-        run: echo "${{ secrets.KEYJKS_PROD }}" | base64 --decode > android/key.jks
+        run: |
+          echo "${{ secrets.KEYPROP_PROD }}" | base64 --decode > android/key.properties
+          if [ -f "android/key.properties" ]; then
+            echo "android/key.properties generated"
+          fi
+      - name: Decoding android/key.jks
+        run: |
+          echo "${{ secrets.KEYJKS_PROD }}" | base64 --decode > android/key.jks
+          if [ -f "android/key.jks" ]; then
+            echo "android/key.jks generated"
+          fi
       - name: Pub Get Packages
         run: flutter pub get
       - name: Build APK
-        run: flutter clean && flutter build apk --split-per-abi --release
+        run: flutter build apk --split-per-abi --release
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
