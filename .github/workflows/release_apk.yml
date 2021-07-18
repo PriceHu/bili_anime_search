@@ -17,16 +17,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
           java-version: "8.x"
           distribution: 'adopt'
+      
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+      
       - name: Setup Flutter
         uses: subosito/flutter-action@v1
         with:
           channel: "stable"
           flutter-version: "2.2.3"
+      
       - name: Decoding android/key.properties
         env:
           KEYPROP_PROD: ${{ secrets.KEYPROP_PROD }}
@@ -34,9 +40,11 @@ jobs:
           echo "$KEYPROP_PROD" | base64 --decode > android/key.properties
       
       - name: Pub Get Packages
-        run: flutter pub get
+        run: flutter doctor -v && flutter pub get
+      
       - name: Build APK
         run: flutter build apk --split-per-abi --release
+      
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
