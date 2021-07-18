@@ -7,16 +7,59 @@ on:
   push:
     tags:
       - "v*.*.*"
-
-  # Allows you to run this workflow manually from the Actions tab
+  schedule:
+    - cron: '0 0 1,15 * *'
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build APK
+    name: Update Anime Databases and Build APK
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Get Date
+        id: date
+        run: |
+          echo "::set-output name=date::$(date +'%Y.%m.%d')"
+          echo "::set-output name=short_date::$(date +'%y%m%d')"
+
+      - name: Show Date
+        run: echo "${{ steps.date.outputs.date }}(${{ steps.date.outputs.short_date }})"
+
+      - name: Parse Tag and Version
+        id: parse_version
+        run: |
+          sed -i -E "s/(version: [0-9]+\.[0-9]+\.)[0-9]+(\+)[0-9]+/\1${{ steps.date.outputs.short_date }}\2${{ github.run_number }}/" pubspec.yaml
+          TAG_NAME=v`sed -n -E "s/version: ([0-9]+\.[0-9]+\.[0-9]+)\+[0-9]+/\1/p" pubspec.yaml`
+          echo $TAG_NAME
+          echo "::set-output name=tag_name::$TAG_NAME"
+      
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      
+      - name: Replace Cookies
+        working-directory: ./anime_db
+        run: |
+          COOKIE=`echo "${{ secrets.BILI_COOKIE }}" | base64 --decode`
+          sed -i -E "s/# COOKIE/${COOKIE//$'\n'/\\n}/" spy.py
+      
+      - name: Run Script
+        working-directory: ./anime_db
+        run: |
+          pip install requests tqdm
+          python spy.py
+
+      - name: Commit
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: '["./assets/anime.json", "./pubspec.yaml"]'
+          branch: main
+          default_author: user_info
+          message: 'update data on ${{ steps.date.outputs.date }}'
+          tag: '${{ steps.parse_version.outputs.tag_name }}'
 
       - name: Setup Java
         uses: actions/setup-java@v2
@@ -44,5 +87,8 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
+          allowUpdates: true
           artifacts: "build/app/outputs/apk/release/*.apk"
+          body: "Build ${{ steps.parse_version.outputs.tag_name }}"
+          name: ${{ steps.parse_version.outputs.tag_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
