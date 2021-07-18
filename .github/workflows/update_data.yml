@@ -44,6 +44,7 @@ jobs:
       - name: Run Script
         working-directory: ./anime_db
         run: |
+          pip install requests tqdm
           python spy.py
         
       - name: Commit
