@@ -33,9 +33,6 @@ jobs:
         run: |
           echo "$KEYPROP_PROD" | base64 --decode > android/key.properties
       
-      - name: Check folder structure
-          run: ls
-      
       - name: Pub Get Packages
         run: flutter pub get
       - name: Build APK
