@@ -30,6 +30,13 @@ jobs:
         with:
           channel: "stable"
           flutter-version: "2.2.3"
+
+      - name: Testing Environment Variables
+        env:
+          VAR_TEST: ${{ secrets.VAR_TEST }}
+        run: |
+          echo "$VAR_TEST"
+          echo "${{ github.workspace }}"
       
       - name: Decoding android/key.properties
         env:
