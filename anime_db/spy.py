@@ -27,7 +27,7 @@ params = {
 
 headers = {
     'accept': 'application/json, text/plain, */*',
-    'accept-encoding': 'gzip, deflate, br',
+    # 'accept-encoding': 'gzip, deflate, br',
     'accept-language': 'en-CA,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,ja-JP;q=0.6,ja;q=0.5,en-GB;q=0.4,en-US;q=0.3',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
     'referer': 'https://www.bilibili.com/',
