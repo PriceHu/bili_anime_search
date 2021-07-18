@@ -30,19 +30,15 @@ jobs:
         with:
           channel: "stable"
           flutter-version: "2.2.3"
-
-      - name: Testing Environment Variables
-        env:
-          VAR_TEST: ${{ secrets.VAR_TEST }}
-        run: |
-          echo "$VAR_TEST"
-          echo "${{ github.workspace }}"
       
-      - name: Decoding android/key.properties
-        env:
-          KEYPROP_PROD: ${{ secrets.KEYPROP_PROD }}
+      - name: Decoding key.properties
+        uses: RollyPeres/base64-to-path@v1
+        with:
+          filePath: ${{ github.workspace }}/android/key.properties
+          encodedString: ${{ secrets.KEYPROP_PROD }}
+
+      - name: Testing key.properties
         run: |
-          echo "$KEYPROP_PROD" | base64 --decode > ./android/key.properties
           sed -n 4p ./android/key.properties
           wc -c ./android/key.properties
       
