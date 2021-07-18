@@ -59,7 +59,6 @@ jobs:
           branch: main
           default_author: user_info
           message: 'update data on ${{ steps.date.outputs.date }}'
-          tag: '${{ steps.parse_version.outputs.tag_name }}'
 
       - name: Setup Java
         uses: actions/setup-java@v2
@@ -91,4 +90,6 @@ jobs:
           artifacts: "build/app/outputs/apk/release/*.apk"
           body: "Build ${{ steps.parse_version.outputs.tag_name }}"
           name: ${{ steps.parse_version.outputs.tag_name }}
+          tag: ${{ steps.parse_version.outputs.tag_name }}
+          commit: "main"
           token: ${{ secrets.GITHUB_TOKEN }}
