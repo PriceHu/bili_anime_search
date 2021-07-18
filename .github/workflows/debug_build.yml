@@ -45,4 +45,4 @@ jobs:
         run: flutter build apk --debug
 
       - name: Build Release APK
-        run: ./android/gradlew -Pverbose=true -Ptarget-platform=android-arm,android-arm64,android-x64 -Ptarget=lib/main.dart -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=true -Psplit-per-abi=true assembleRelease --stacktrace
+        run: flutter build apk --split-per-abi --release
