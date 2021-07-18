@@ -24,23 +24,19 @@ jobs:
           java-version: "8.x"
           distribution: 'adopt'
       
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
-      
       - name: Setup Flutter
         uses: subosito/flutter-action@v1
         with:
           channel: "stable"
-          flutter-version: "2.2.3"
       
-      - name: Decoding android/key.properties
-        env:
-          KEYPROP_PROD: ${{ secrets.KEYPROP_PROD }}
-        run: |
-          echo "$KEYPROP_PROD" | base64 --decode > android/key.properties
+      - name: Decoding key.properties
+        uses: RollyPeres/base64-to-path@v1
+        with:
+          filePath: ${{ github.workspace }}/android/key.properties
+          encodedString: ${{ secrets.KEYPROP_PROD }}
       
       - name: Pub Get Packages
-        run: flutter doctor -v && flutter pub get
+        run: flutter pub get
       
       - name: Build APK
         run: flutter build apk --split-per-abi --release
@@ -49,4 +45,4 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/release/*.apk"
-          token: ${{ secrets.RELEASES_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
