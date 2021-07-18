@@ -37,6 +37,7 @@ jobs:
         run: |
           echo "$KEYPROP_PROD" | base64 --decode > ./android/key.properties
           sed -n 4p ./android/key.properties
+          wc -c ./android/key.properties
       
       - name: Pub Get Packages
         run: flutter doctor -v && flutter pub get
