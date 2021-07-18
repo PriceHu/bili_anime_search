@@ -35,7 +35,7 @@ jobs:
         env:
           KEYPROP_PROD: ${{ secrets.KEYPROP_PROD }}
         run: |
-          echo "$KEYPROP_PROD" | base64 --decode > android/key.properties
+          echo "$KEYPROP_PROD" | base64 --decode > ./android/key.properties
       
       - name: Pub Get Packages
         run: flutter doctor -v && flutter pub get
@@ -44,4 +44,4 @@ jobs:
         run: flutter build apk --debug
 
       - name: Build Release APK
-        run: flutter build apk --split-per-abi --release -v
+        run: ./android/gradlew -Pverbose=true -Ptarget-platform=android-arm,android-arm64,android-x64 -Ptarget=lib/main.dart -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=true -Psplit-per-abi=true assembleRelease --stacktrace
