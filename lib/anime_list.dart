@@ -1,8 +1,11 @@
+import 'dart:collection';
 import 'dart:developer';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
+
+import 'string_utils.dart';
 
 class AnimeListPage extends StatefulWidget {
   AnimeListPage(this.data);
@@ -171,19 +174,35 @@ class _AnimeListPageState extends State<AnimeListPage> {
   }
 
   void _search() {
+    // TODO 繁化
+    // TODO implement complex search
+    // TODO 搜索语法
     log('searching: $keyword');
     if (keyword == '') {
       setState(() {
         content = widget.data;
       });
     } else {
+      var keywords = keyword.toKeywords();
       content = [];
+      SplayTreeMap<int, List> hitMap = SplayTreeMap((a, b) => b - a);
       for (var anime in widget.data) {
-        if (anime['title'].toString().contains(keyword)) {
-          content.add(anime);
+        int hit = 0;
+        String title = anime['title'].toString().toLowerCase();
+        keywords.forEach((e) {
+          if (title.contains(e)) hit++;
+        });
+        if (hit > 0) {
+          hitMap.containsKey(hit)
+              ? hitMap[hit]?.add(anime)
+              : hitMap[hit] = [anime];
         }
       }
-      setState(() {});
+      setState(() {
+        hitMap.forEach((key, value) {
+          content.addAll(value);
+        });
+      });
     }
   }
 
