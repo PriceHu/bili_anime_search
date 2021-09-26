@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
@@ -33,6 +34,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List? data;
+  final _viewStateStream = StreamController<ViewState>();
+  ViewState _viewState = ViewState.grid;
+
+  @override
+  void initState() {
+    super.initState();
+    _viewStateStream.sink.add(_viewState);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +51,20 @@ class _HomePageState extends State<HomePage> {
             widget.title,
             style: TextStyle(color: Colors.white),
           ),
+          actions: [
+            IconButton(
+              icon: Icon(ViewStateDetail[_viewState.index][0]),
+              tooltip: ViewStateDetail[_viewState.index][1],
+              onPressed: () {
+                setState(() {
+                  _viewState = ViewState
+                      .values[(_viewState.index + 1) % ViewState.values.length];
+                  _viewStateStream.add(_viewState);
+                  log('查看方式改变: ${_viewState.toString()}');
+                });
+              },
+            ),
+          ],
         ),
         body: FutureBuilder(
           future: _loadAnimeData(),
@@ -64,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               );
             } else {
-              return AnimeListPage(data!);
+              return AnimeListPage(data!, _viewStateStream.stream);
             }
           },
         ));
@@ -78,4 +101,19 @@ class _HomePageState extends State<HomePage> {
     log('${data!.length} 部动画已载入');
     return true;
   }
+
+  @override
+  void dispose() {
+    _viewStateStream.close();
+    super.dispose();
+  }
 }
+
+enum ViewState {
+  list,
+  grid,
+}
+const List ViewStateDetail = [
+  [Icons.view_list_rounded, 'List View'],
+  [Icons.grid_view_rounded, 'Grid View'],
+];

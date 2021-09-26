@@ -5,12 +5,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
-import 'string_utils.dart';
+import 'main.dart';
+import 'utils.dart';
 
 class AnimeListPage extends StatefulWidget {
-  AnimeListPage(this.data);
+  AnimeListPage(this.data, this.viewStateStream);
 
   final List data;
+  final Stream<ViewState> viewStateStream;
 
   @override
   State<StatefulWidget> createState() => _AnimeListPageState();
@@ -18,21 +20,58 @@ class AnimeListPage extends StatefulWidget {
 
 class _AnimeListPageState extends State<AnimeListPage> {
   String keyword = '';
+  List searchResult = [];
   late List content;
+  ViewState viewState = ViewState.grid;
+  final ScrollController scrollController = ScrollController();
+
+  static const int pageLength = 15;
+  int page = 0;
 
   @override
   void initState() {
-    content = widget.data;
+    content = widget.data.sublist(0, pageLength);
+    widget.viewStateStream.listen((event) {
+      setState(() {
+        viewState = event;
+      });
+    });
+    scrollController.addListener(_pagination);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    Widget resultList;
+    switch (viewState) {
+      case ViewState.list:
+        resultList = ListView.builder(
+          itemBuilder: _listItemBuilder,
+          itemCount: content.length,
+          controller: scrollController,
+        );
+        break;
+      case ViewState.grid:
+      default:
+        resultList = GridView.builder(
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 180,
+            mainAxisSpacing: 6,
+            crossAxisSpacing: 6,
+            childAspectRatio: 9.0 / 17.0,
+          ),
+          itemBuilder: _gridItemBuilder,
+          // itemCount: 3,
+          itemCount: content.length,
+          controller: scrollController,
+        );
+        break;
+    }
     return Column(
       children: [
         Container(
           height: 60.0,
-          padding: EdgeInsets.only(right: 16.0, left: 16.0, top: 8.0),
+          padding: EdgeInsets.only(right: 16.0, left: 16.0, top: 16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
@@ -63,32 +102,100 @@ class _AnimeListPageState extends State<AnimeListPage> {
                   _search();
                 },
                 icon: Icon(
-                  Icons.search,
+                  Icons.search_rounded,
                   color: Theme.of(context).accentColor,
                 ),
+                padding: EdgeInsets.zero,
               ),
             ],
           ),
         ),
         Expanded(
-          child: GridView.builder(
+          child: Padding(
             padding: EdgeInsets.all(12.0),
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 180,
-              mainAxisSpacing: 6,
-              crossAxisSpacing: 6,
-              childAspectRatio: 9.0 / 17.0,
-            ),
-            itemBuilder: _itemBuilder,
-            // itemCount: 3,
-            itemCount: content.length,
+            child: resultList,
           ),
         )
       ],
     );
   }
 
-  Widget _itemBuilder(BuildContext context, int index) {
+  Widget _listItemBuilder(BuildContext context, int index) {
+    return Container(
+      height: 96.0,
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          splashColor:
+              Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
+          highlightColor: Colors.transparent,
+          onTap: () {
+            _launch(content[index]['link']);
+          },
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              AspectRatio(
+                aspectRatio: 3.0 / 4.0,
+                child: _buildCover(context, index),
+              ),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    content[index]['title'],
+                    style: TextStyle(fontSize: 12),
+                    textAlign: TextAlign.center,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _gridItemBuilder(BuildContext context, int index) {
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        splashColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
+        highlightColor: Colors.transparent,
+        onTap: () {
+          _launch(content[index]['link']);
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              flex: 12,
+              child: _buildCover(context, index),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                padding: EdgeInsets.all(4.0),
+                alignment: Alignment.center,
+                child: Text(
+                  content[index]['title'],
+                  style: TextStyle(fontSize: 12),
+                  textAlign: TextAlign.center,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCover(BuildContext context, int index) {
     List<Widget> stack = [
       Positioned.fill(
         child: Container(
@@ -102,14 +209,7 @@ class _AnimeListPageState extends State<AnimeListPage> {
             errorWidget: (context, url, _) {
               return Image.asset('assets/error.png');
             },
-            httpHeaders: {
-              'Accept':
-                  'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-              'Referer': 'https://www.bilibili.com/',
-              'Origin': 'https://www.bilibili.com',
-              'User-Agent':
-                  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36',
-            },
+            httpHeaders: BiliHeaders,
           ),
         ),
       )
@@ -137,54 +237,22 @@ class _AnimeListPageState extends State<AnimeListPage> {
         ),
       ));
     }
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        splashColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
-        highlightColor: Colors.transparent,
-        onTap: () {
-          _launch(content[index]['link']);
-        },
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-                flex: 12,
-                child: Stack(
-                  children: stack,
-                )),
-            Expanded(
-              flex: 5,
-              child: Container(
-                padding: EdgeInsets.all(4.0),
-                alignment: Alignment.center,
-                child: Text(
-                  content[index]['title'],
-                  style: TextStyle(fontSize: 12),
-                  textAlign: TextAlign.center,
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return Stack(children: stack);
   }
 
   void _search() {
-    // TODO 繁化
+    // TODO 繁化:process using script
     // TODO implement complex search
     // TODO 搜索语法
     log('searching: $keyword');
+    _reset();
     if (keyword == '') {
       setState(() {
-        content = widget.data;
+        content = widget.data.getPage(0, pageLength);
       });
     } else {
+      content.clear();
       var keywords = keyword.toKeywords();
-      content = [];
       SplayTreeMap<int, List> hitMap = SplayTreeMap((a, b) => b - a);
       for (var anime in widget.data) {
         int hit = 0;
@@ -198,12 +266,20 @@ class _AnimeListPageState extends State<AnimeListPage> {
               : hitMap[hit] = [anime];
         }
       }
+      hitMap.forEach((key, value) {
+        searchResult.addAll(value);
+      });
+      log('search for "$keyword" returned ${searchResult.length} items.');
       setState(() {
-        hitMap.forEach((key, value) {
-          content.addAll(value);
-        });
+        content = searchResult.getPage(0, pageLength);
       });
     }
+  }
+
+  void _reset() {
+    searchResult.clear();
+    page = 0;
+    scrollController.jumpTo(0.0);
   }
 
   void _launch(String url) async {
@@ -211,6 +287,20 @@ class _AnimeListPageState extends State<AnimeListPage> {
       await launch(url);
     } catch (e) {
       log('$e');
+    }
+  }
+
+  void _pagination() {
+    if (scrollController.position.pixels >=
+            scrollController.position.maxScrollExtent - 10.0 &&
+        content.length <
+            (searchResult.isEmpty ? widget.data.length : searchResult.length)) {
+      setState(() {
+        page += 1;
+        content.addAll((searchResult.isEmpty ? widget.data : searchResult)
+            .getPage(page, pageLength));
+        log('loaded page ${page + 1}');
+      });
     }
   }
 }
