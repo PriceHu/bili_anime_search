@@ -258,7 +258,8 @@ class _AnimeListPageState extends State<AnimeListPage> {
         int hit = 0;
         String title = anime['title'].toString().toLowerCase();
         keywords.forEach((e) {
-          if (title.contains(e)) hit++;
+          if (anime['simplified'].toString().toLowerCase().contains(e) ||
+              anime['traditional'].toString().toLowerCase().contains(e)) hit++;
         });
         if (hit > 0) {
           hitMap.containsKey(hit)

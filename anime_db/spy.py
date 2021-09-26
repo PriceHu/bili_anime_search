@@ -46,8 +46,8 @@ while (has_next == 1):
     r = requests.get('https://api.bilibili.com/pgc/season/index/result', params=params, headers=headers, cookies=cookies)
     data = json.loads(r.content)
     has_next = data['data']['has_next']
-
-    print('status code: %s, page: %d, has next: %d, data size: %d' %(r.status_code, params['page'], has_next, len(data['data']['list'])))
+    print('status code: %s, page: %d, has next: %d, data size: %d' % (r.status_code, params['page'], has_next, len(data['data']['list'])))
+    
     anime_list.extend(data['data']['list'])
     print('database size: %d'%(len(anime_list)))
     params['page'] += 1
@@ -66,6 +66,37 @@ with codecs.open('../assets/anime.json', 'r+', encoding='utf-8') as old_db:
     
     print('merged database size: %d'%(len(anime_list)))
 
+def convert(converter:str, text:str):
+    r = requests.post('https://api.zhconvert.org/convert', params={'text': text, 'converter': converter}, headers=headers)
+    print('status code: %s'% (r.status_code))
+    if (r.status_code != 200): print(r.content)
+    content = json.loads(r.content)
+    print('code: %s, converter: %s, textFormat: %s, text length: %d' % (content['data']['converter'], content['code'], content['data']['textFormat'], len(content['data']['text'])))
+    return str(content['data']['text'])
+
+i = 0
+names = ""
+traditionalNames = []
+simplifiedNames = []
+for anime in anime_list:
+    names += anime['title'] + '\n'
+    i += 1
+    if (i == 200):
+        print('繁化%d项...' % i)
+        traditionalNames.extend(convert('Traditional', names).splitlines())
+        print('简化%d项...' % i)
+        simplifiedNames.extend(convert('Simplified', names).splitlines())
+        i = 0
+        names = ""
+
+print('繁化%d项...' % i)
+traditionalNames.extend(convert('Traditional', names).splitlines())
+print('简化%d项...' % i)
+simplifiedNames.extend(convert('Simplified', names).splitlines())
+
+for idx in range(len(anime_list)):
+    anime_list[idx]['traditional'] = traditionalNames[idx]
+    anime_list[idx]['simplified'] = simplifiedNames[idx]
 
 with codecs.open('../assets/anime.json', 'w+', encoding='utf-8') as db:
     json.dump(anime_list, db, indent=4, ensure_ascii=False)
