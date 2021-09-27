@@ -1,7 +1,9 @@
 import 'dart:collection';
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +30,8 @@ class _AnimeListPageState extends State<AnimeListPage> {
   static const int pageLength = 15;
   int page = 0;
 
+  bool searching = false;
+
   @override
   void initState() {
     content = widget.data.sublist(0, pageLength);
@@ -42,6 +46,25 @@ class _AnimeListPageState extends State<AnimeListPage> {
 
   @override
   Widget build(BuildContext context) {
+    if (searching) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(
+              child: CircularProgressIndicator(),
+              width: 48,
+              height: 48,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 16),
+              child: Text('搜索中...'),
+            )
+          ],
+        ),
+      );
+    }
+
     Widget resultList;
     switch (viewState) {
       case ViewState.list:
@@ -240,11 +263,14 @@ class _AnimeListPageState extends State<AnimeListPage> {
     return Stack(children: stack);
   }
 
-  void _search() {
-    // TODO 繁化:process using script
-    // TODO implement complex search
-    // TODO 搜索语法
-    log('searching: $keyword');
+  void _search() async {
+    if (searching) {
+      log('already searching...');
+      return;
+    }
+
+    searching = true;
+    log('searching: $keyword...');
     _reset();
     if (keyword == '') {
       setState(() {
@@ -252,14 +278,32 @@ class _AnimeListPageState extends State<AnimeListPage> {
       });
     } else {
       content.clear();
-      var keywords = keyword.toKeywords();
+      var searchString = keyword;
+      Map altNames =
+          json.decode(await rootBundle.loadString('assets/alt_names.json'));
+      altNames.forEach((key, value) {
+        if (keyword.contains(key)) {
+          searchString += " $value ";
+          log('adding alternative names: $value');
+        }
+      });
+      log('search string: $searchString');
+      var keywords = searchString.toKeywords();
       SplayTreeMap<int, List> hitMap = SplayTreeMap((a, b) => b - a);
       for (var anime in widget.data) {
         int hit = 0;
-        String title = anime['title'].toString().toLowerCase();
         keywords.forEach((e) {
-          if (anime['simplified'].toString().toLowerCase().contains(e) ||
-              anime['traditional'].toString().toLowerCase().contains(e)) hit++;
+          e = e.cleanup();
+          if (anime['simplified']
+                  .toString()
+                  .toLowerCase()
+                  .cleanup()
+                  .contains(e) ||
+              anime['traditional']
+                  .toString()
+                  .toLowerCase()
+                  .cleanup()
+                  .contains(e)) hit++;
         });
         if (hit > 0) {
           hitMap.containsKey(hit)
@@ -275,6 +319,7 @@ class _AnimeListPageState extends State<AnimeListPage> {
         content = searchResult.getPage(0, pageLength);
       });
     }
+    searching = false;
   }
 
   void _reset() {

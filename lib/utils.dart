@@ -8,12 +8,25 @@ const BiliHeaders = {
 };
 
 extension StringUtil on String {
-  // TODO
   Set<String> toKeywords() {
-    return (this.toLowerCase().split(RegExp(
-            '[ ·！…（）【】《》—、，。？；：‘’“”~!@#\$%^&*()\\-=_+\\[\\]{}\\\\|;:\'",.<>/?]'))
-          ..removeWhere((e) => e == ''))
-        .toSet();
+    return (this.toLowerCase().split(' ')..removeWhere((e) => e == '')).toSet()
+      ..forEach((e) => e.replaceAll('+', ' '));
+  }
+
+  // RegExp('[·！…（）【】《》—、，。？；：‘’“”~!@#\$%^&*()\\-=_\\[\\]{}\\\\|;:\'",.<>/?]')
+  String cleanup() {
+    return this
+        .replaceAll('。', '.')
+        .replaceAll('，', ',')
+        .replaceAll('：', ':')
+        .replaceAll('；', ';')
+        .replaceAll('！', '!')
+        .replaceAll('？', '?')
+        .replaceAll('（', '(')
+        .replaceAll('）', ')')
+        .replaceAll('+', ' ')
+        .replaceAll(RegExp(' +'), ' ')
+        .trim();
   }
 }
 
