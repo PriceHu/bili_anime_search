@@ -11,7 +11,9 @@ A simple and basic anime search tool for BiliBili.
 
 [BiliBili番剧索引](https://www.bilibili.com/anime/index/)(Sorted by on air date.)
 
-## TODO
+## ChangeLog
 
-- Fuzzy search
-- Anime alias search
+### 0.2
+- multi keywords search
+- alternative names for anime
+- list view

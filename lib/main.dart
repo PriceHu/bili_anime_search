@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '哔哩哔哩番剧搜索',
       theme: ThemeData(
-        primaryColor: Color(0xFFFA7299),
+        colorScheme: Theme.of(context).colorScheme.copyWith(primary: Color(0xFFFA7299)),
+        // primaryColor: Color(0xFFFA7299),
       ),
       home: HomePage(title: '哔哩哔哩番剧搜索'),
     );

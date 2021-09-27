@@ -550,6 +550,28 @@
         "simplified": "不存在的战区"
     },
     {
+        "badge": "会员抢先",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员抢先"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/041d2a45493aa0bcbfc06d23e91050ca256af96b.png",
+        "index_show": "",
+        "is_finish": 0,
+        "link": "https://www.bilibili.com/bangumi/play/ss39333",
+        "media_id": 28235025,
+        "order": "10月11日开播",
+        "order_type": "pub_time",
+        "season_id": 39333,
+        "season_type": 1,
+        "title": "RE-MAIN：男子水球部/少年与水球",
+        "title_icon": "",
+        "traditional": "RE-MAIN：男子水球部/少年與水球",
+        "simplified": "RE-MAIN：男子水球部/少年与水球"
+    },
+    {
         "badge": "独家",
         "badge_info": {
             "bg_color": "#00C0FF",
@@ -1438,7 +1460,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/7640cd83f8d37bbde21d5735974af0babec72b4a.png",
-        "index_show": "更新至第11话",
+        "index_show": "更新至第12话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss39011",
         "media_id": 28234703,
@@ -1812,7 +1834,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/949291f78f67a1b9f901e2c5b4cbc050dc80a53f.png",
-        "index_show": "更新至第12话",
+        "index_show": "更新至第13话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss39046",
         "media_id": 28234738,
@@ -19002,10 +19024,10 @@
         "order_type": "pub_time",
         "season_id": 23854,
         "season_type": 1,
-        "title": "鲁邦三世 PART5",
+        "title": "鲁邦三世 第五季",
         "title_icon": "",
-        "traditional": "魯邦三世 PART5",
-        "simplified": "鲁邦三世 PART5"
+        "traditional": "魯邦三世 第五季",
+        "simplified": "鲁邦三世 第五季"
     },
     {
         "badge": "独家",
@@ -22822,7 +22844,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/71d54cae830d32a5af776dcc46632146fbdba868.jpg",
-        "index_show": "更新至第207话",
+        "index_show": "更新至第208话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss5978",
         "media_id": 5978,
@@ -35128,10 +35150,10 @@
         "order_type": "pub_time",
         "season_id": 26714,
         "season_type": 1,
-        "title": "鲁邦三世 次元大介的墓标",
+        "title": "鲁邦三世：次元大介的墓标",
         "title_icon": "",
-        "traditional": "魯邦三世 次元大介的墓標",
-        "simplified": "鲁邦三世 次元大介的墓标"
+        "traditional": "魯邦三世：次元大介的墓標",
+        "simplified": "鲁邦三世：次元大介的墓标"
     },
     {
         "badge": "会员专享",

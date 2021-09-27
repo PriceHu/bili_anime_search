@@ -126,7 +126,7 @@ class _AnimeListPageState extends State<AnimeListPage> {
                 },
                 icon: Icon(
                   Icons.search_rounded,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
                 padding: EdgeInsets.zero,
               ),
