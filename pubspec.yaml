@@ -3,7 +3,7 @@ description: A simple and basic anime search tool for BiliBili.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 0.2.220115+26
+version: 0.2.220201+27
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
