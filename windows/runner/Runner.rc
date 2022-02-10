@@ -90,10 +90,10 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "faith.uchidakotori" "\0"
-            VALUE "FileDescription", "A new Flutter project." "\0"
+            VALUE "FileDescription", "bili_anime_search" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "bili_anime_search" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2021 faith.uchidakotori. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 faith.uchidakotori. All rights reserved." "\0"
             VALUE "OriginalFilename", "bili_anime_search.exe" "\0"
             VALUE "ProductName", "bili_anime_search" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
