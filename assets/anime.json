@@ -44,6 +44,138 @@
         "simplified": "测不准的阿波连同学"
     },
     {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/ac1595fa37bfef4bd03e5790f0c898ca77c21868.png",
+        "index_show": "2016-11-04上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss41305?theme=movie",
+        "media_id": 28237013,
+        "order": "2月26日开播",
+        "order_type": "pub_time",
+        "season_id": 41305,
+        "season_type": 2,
+        "title": "蜡笔小新：梦境世界大突击",
+        "title_icon": "",
+        "traditional": "蠟筆小新：夢境世界大突擊",
+        "simplified": "蜡笔小新：梦境世界大突击"
+    },
+    {
+        "badge": "会员抢先",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员抢先"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/e43e2a6802a29ced2c0a82f0d52b5dcbeb8170b6.png",
+        "index_show": "更新至第1话",
+        "is_finish": 0,
+        "link": "https://www.bilibili.com/bangumi/play/ss40260",
+        "media_id": 28235964,
+        "order": "2月26日开播",
+        "order_type": "pub_time",
+        "season_id": 40260,
+        "season_type": 1,
+        "title": "白领羽球部",
+        "title_icon": "",
+        "traditional": "白領羽球部",
+        "simplified": "白领羽球部"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/cae0f58a08185748b100063db4238341f722d107.png",
+        "index_show": "全50话",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss41287",
+        "media_id": 28236995,
+        "order": "2月24日开播",
+        "order_type": "pub_time",
+        "season_id": 41287,
+        "season_type": 1,
+        "title": "迷你天线宝宝",
+        "title_icon": "",
+        "traditional": "迷你天線寶寶",
+        "simplified": "迷你天线宝宝"
+    },
+    {
+        "badge": "",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": ""
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/7d836de95fc87c2ae6b513da5a611d19f13a032b.jpg",
+        "index_show": "更新至第177话",
+        "is_finish": 0,
+        "link": "https://www.bilibili.com/bangumi/play/ss41214",
+        "media_id": 28236922,
+        "order": "敬请期待开播",
+        "order_type": "pub_time",
+        "season_id": 41214,
+        "season_type": 1,
+        "title": "朱妮托尼儿歌 中文配音",
+        "title_icon": "",
+        "traditional": "朱妮托尼兒歌 中文配音",
+        "simplified": "朱妮托尼儿歌 中文配音"
+    },
+    {
+        "badge": "",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": ""
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/eb89ccedccf8d093c3bddcdceff609dc109b2ebf.png",
+        "index_show": "更新至第176话",
+        "is_finish": 0,
+        "link": "https://www.bilibili.com/bangumi/play/ss41151",
+        "media_id": 28236857,
+        "order": "敬请期待开播",
+        "order_type": "pub_time",
+        "season_id": 41151,
+        "season_type": 1,
+        "title": "朱妮托尼儿歌",
+        "title_icon": "",
+        "traditional": "朱妮托尼兒歌",
+        "simplified": "朱妮托尼儿歌"
+    },
+    {
+        "badge": "会员抢先",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员抢先"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/067fb32e9f8fd6453f275c63ca8a85ad65227e28.png",
+        "index_show": "更新至第28话",
+        "is_finish": 0,
+        "link": "https://www.bilibili.com/bangumi/play/ss41245",
+        "media_id": 28236953,
+        "order": "2月16日开播",
+        "order_type": "pub_time",
+        "season_id": 41245,
+        "season_type": 1,
+        "title": "能量战士 中文配音",
+        "title_icon": "",
+        "traditional": "能量戰士 中文配音",
+        "simplified": "能量战士 中文配音"
+    },
+    {
         "badge": "独家",
         "badge_info": {
             "bg_color": "#00C0FF",
@@ -52,11 +184,11 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/05ee8871df7c9afad0a961dab2abc90dc22c1d77.png",
-        "index_show": "更新至第1话",
+        "index_show": "更新至第15话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss41197",
         "media_id": 28236905,
-        "order": "昨天0:00开播",
+        "order": "2月14日开播",
         "order_type": "pub_time",
         "season_id": 41197,
         "season_type": 1,
@@ -118,7 +250,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/c6c1b4679080f9a83f2e43e0163c4d5cf86b9235.jpg",
-        "index_show": "更新至第9话",
+        "index_show": "更新至第12话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40754",
         "media_id": 28236460,
@@ -140,7 +272,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/0c05a5090cefb03eac9863792cb40c3e7a1677f1.png",
-        "index_show": "更新至第2话",
+        "index_show": "更新至第4话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40241",
         "media_id": 28235945,
@@ -426,7 +558,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/ad05237125b492b4b20a46ce10551636e21472ec.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第10话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss41011",
         "media_id": 28236717,
@@ -448,7 +580,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/31731676b2d61b6eb15826980a73e7826fc00ad7.png",
-        "index_show": "更新至第11话",
+        "index_show": "更新至第16话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40798",
         "media_id": 28236504,
@@ -536,7 +668,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/cba9f3b5d0a40a589c27b327b71c5f29c0a4bd11.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第10话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss41009",
         "media_id": 28236715,
@@ -646,7 +778,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/c16fa6ed1c67d8f98a648e7aeac19ff7ec24c3bb.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第10话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss41006",
         "media_id": 28236712,
@@ -910,7 +1042,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/ecb52c79def9f5a6099c5a0770f56e20479fb008.jpg",
-        "index_show": "更新至第5话",
+        "index_show": "更新至第7话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40873",
         "media_id": 28236579,
@@ -976,7 +1108,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/314c9855b31b9acb35663598755243b87629a9f9.png",
-        "index_show": "更新至第5话",
+        "index_show": "更新至第7话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40516",
         "media_id": 28236221,
@@ -998,7 +1130,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/876063fff133eff35b98d1e4fc8da104d135d26a.png",
-        "index_show": "更新至第5话",
+        "index_show": "更新至第7话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40154",
         "media_id": 28235858,
@@ -1020,7 +1152,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/ac2bf4cf0a0e661f0d497229f112470572240bb6.png",
-        "index_show": "更新至第5话",
+        "index_show": "更新至第7话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40142",
         "media_id": 28235846,
@@ -1042,7 +1174,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/60d9685ebae04a4e2092857d5ee41a4de7316652.png",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40153",
         "media_id": 28235857,
@@ -1064,7 +1196,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/8e8aa0d7baedef32a4491166aca34324c39d7485.png",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40272",
         "media_id": 28235976,
@@ -1086,7 +1218,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/5355e44d9c94715ff92c34088483215411ea0825.png",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40258",
         "media_id": 28235962,
@@ -1108,7 +1240,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/403674a2f66c9a50943f841dac43a9a022631f72.png",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40264",
         "media_id": 28235968,
@@ -1130,7 +1262,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/09fdebda5164860b6e169f7ae144c603f95a472b.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40246",
         "media_id": 28235950,
@@ -1152,7 +1284,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/b56ed5170780b398a545fa0e142af678b90bfda8.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40156",
         "media_id": 28235860,
@@ -1174,7 +1306,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/bc46b82279cd5af8b48c910576cbcd129b9110bd.png",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40140",
         "media_id": 28235844,
@@ -1306,7 +1438,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/b0a9e6fdf83b41f228ed15e755a7e963dedb500e.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40257",
         "media_id": 28235961,
@@ -1328,7 +1460,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/a626e4d7c4e09018b2314ce0cb98881c7aa783c8.png",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40134",
         "media_id": 28235838,
@@ -1350,7 +1482,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/2b8fa0e1d4e15442adbe6085a01d7f6b22c003da.jpg",
-        "index_show": "更新至第6话",
+        "index_show": "更新至第8话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss40116",
         "media_id": 28235820,
@@ -1870,11 +2002,11 @@
         "simplified": "Q版猫和老鼠 第一季"
     },
     {
-        "badge": "会员抢先",
+        "badge": "会员专享",
         "badge_info": {
             "bg_color": "#FB7299",
             "bg_color_night": "#BB5B76",
-            "text": "会员抢先"
+            "text": "会员专享"
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/222139836fbbe2500fcf10558e7f40ce6702de3b.png",
@@ -2032,7 +2164,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/fb76fcf060b6868b0c58bba16586cd742774a1d1.jpg",
-        "index_show": "更新至第15话",
+        "index_show": "更新至第16话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss39468",
         "media_id": 28235160,
@@ -2054,7 +2186,7 @@
         },
         "badge_type": 1,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/376d7e69a667bcb1c0b934a4e35e07e7fa23110b.png",
-        "index_show": "更新至第17话",
+        "index_show": "更新至第19话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss39462",
         "media_id": 28235154,
@@ -2076,7 +2208,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/fecb68763f24d371167389abedf05742b0bf024f.png",
-        "index_show": "更新至第18话",
+        "index_show": "更新至第20话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss38366",
         "media_id": 28234050,
@@ -3021,9 +3153,9 @@
             "text": "独家"
         },
         "badge_type": 1,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/image/fd30e0fcc43d0e3d1737521f407e0a291da35817.png",
-        "index_show": "全12话",
-        "is_finish": 1,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/c658b4156698f1b8c4d175d706df4eb33db61756.png",
+        "index_show": "更新至第13话",
+        "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss38924",
         "media_id": 28234616,
         "order": "21年7月开播",
@@ -3814,7 +3946,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/aeafde08c320be16687f1a98dd0b3e9c15ab5543.png",
-        "index_show": "更新至第19话",
+        "index_show": "更新至第21话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss39041",
         "media_id": 28234733,
@@ -3902,7 +4034,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/ddfeb0782515b3af39fb12818273b9ced5850f34.jpg",
-        "index_show": "更新至第19话",
+        "index_show": "更新至第21话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss38952",
         "media_id": 28234644,
@@ -5896,11 +6028,11 @@
         "simplified": "欧布奥特曼 原生之初"
     },
     {
-        "badge": "限时免费",
+        "badge": "会员专享",
         "badge_info": {
             "bg_color": "#FB7299",
             "bg_color_night": "#BB5B76",
-            "text": "限时免费"
+            "text": "会员专享"
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/bdf4c45643a9847ad6b03f320f40f62d05b9a75f.png",
@@ -5918,11 +6050,11 @@
         "simplified": "欧布奥特曼（中配）"
     },
     {
-        "badge": "限时免费",
+        "badge": "会员专享",
         "badge_info": {
             "bg_color": "#FB7299",
             "bg_color_night": "#BB5B76",
-            "text": "限时免费"
+            "text": "会员专享"
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/bdf4c45643a9847ad6b03f320f40f62d05b9a75f.png",
@@ -9732,7 +9864,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/4ab5cf1efbd1c5883b8f0580cb0304f5452c4665.png",
-        "index_show": "更新至第57话",
+        "index_show": "更新至第59话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss34425",
         "media_id": 28229894,
@@ -11712,7 +11844,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/38e2a273f528fd01c34f1fc4df0f69c64487efad.png",
-        "index_show": "更新至第1093话",
+        "index_show": "更新至第1094话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss33415",
         "media_id": 28228813,
@@ -14109,28 +14241,6 @@
             "text": "会员专享"
         },
         "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/image/1ff20c208c205aa8eca2c3d849f4ac8f046514f8.jpg",
-        "index_show": "2019-09-13上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss28872?theme=movie",
-        "media_id": 28223276,
-        "order": "19年10月开播",
-        "order_type": "pub_time",
-        "season_id": 28872,
-        "season_type": 2,
-        "title": "名侦探柯南：绀青之拳",
-        "title_icon": "",
-        "traditional": "名偵探柯南：紺青之拳",
-        "simplified": "名侦探柯南：绀青之拳"
-    },
-    {
-        "badge": "会员专享",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": "会员专享"
-        },
-        "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/9a6851ae4154c70865fea2119944762ad7463eed.png",
         "index_show": "全1话",
         "is_finish": 1,
@@ -14562,28 +14672,6 @@
         "title_icon": "",
         "traditional": "非槍人生",
         "simplified": "非枪人生"
-    },
-    {
-        "badge": "会员专享",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": "会员专享"
-        },
-        "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/5f921ab5be2bbb8359d9c70b1b1caa817ca18e80.jpg",
-        "index_show": "2019-06-01上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss28772?theme=movie",
-        "media_id": 28223068,
-        "order": "19年10月开播",
-        "order_type": "pub_time",
-        "season_id": 28772,
-        "season_type": 2,
-        "title": "哆啦A梦：大雄的月球探险记",
-        "title_icon": "",
-        "traditional": "哆啦A夢：大雄的月球探險記",
-        "simplified": "哆啦A梦：大雄的月球探险记"
     },
     {
         "badge": "",
@@ -15803,28 +15891,6 @@
             "text": ""
         },
         "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/aff0dc6ea840c746c6401a08bf7aadc4bf8c5078.jpg",
-        "index_show": "2019-07-19上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss28381?theme=movie",
-        "media_id": 28222224,
-        "order": "19年8月开播",
-        "order_type": "pub_time",
-        "season_id": 28381,
-        "season_type": 2,
-        "title": "游戏人生 零",
-        "title_icon": "",
-        "traditional": "遊戲人生 零",
-        "simplified": "游戏人生 零"
-    },
-    {
-        "badge": "",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": ""
-        },
-        "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/25d489913696fc2ff8104de58533238798dd44c6.jpg",
         "index_show": "全9话",
         "is_finish": 1,
@@ -15882,28 +15948,6 @@
         "title_icon": "",
         "traditional": "少女☆歌劇Revue Starlight -The LIVE- #2 Transition",
         "simplified": "少女☆歌剧Revue Starlight -The LIVE- #2 Transition"
-    },
-    {
-        "badge": "会员专享",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": "会员专享"
-        },
-        "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/7f204779f418604cb2e6748d3b8fa04f72e5205a.jpg",
-        "index_show": "2019-05-17上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss28047?theme=movie",
-        "media_id": 28221478,
-        "order": "19年7月开播",
-        "order_type": "pub_time",
-        "season_id": 28047,
-        "season_type": 2,
-        "title": "企鹅公路",
-        "title_icon": "",
-        "traditional": "企鵝公路",
-        "simplified": "企鹅公路"
     },
     {
         "badge": "会员专享",
@@ -16544,28 +16588,6 @@
         "simplified": "魔王大人、RETRY！（仅限港澳台地区）"
     },
     {
-        "badge": "会员专享",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": "会员专享"
-        },
-        "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/af04aa78a528730ea2fc601f82b31a3b96b5ab29.jpg",
-        "index_show": "2019-05-24上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss28046?theme=movie",
-        "media_id": 28221477,
-        "order": "19年7月开播",
-        "order_type": "pub_time",
-        "season_id": 28046,
-        "season_type": 2,
-        "title": "龙珠超：布罗利",
-        "title_icon": "",
-        "traditional": "龍珠超：布羅利",
-        "simplified": "龙珠超：布罗利"
-    },
-    {
         "badge": "独家",
         "badge_info": {
             "bg_color": "#00C0FF",
@@ -16740,28 +16762,6 @@
         "title_icon": "",
         "traditional": "獵獸神兵",
         "simplified": "猎兽神兵"
-    },
-    {
-        "badge": "会员专享",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": "会员专享"
-        },
-        "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/3d0cc3fb367cc45ae4b2252b09d9f8d379b15a06.jpg",
-        "index_show": "2019-03-07上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss27990?theme=movie",
-        "media_id": 28221382,
-        "order": "19年6月开播",
-        "order_type": "pub_time",
-        "season_id": 27990,
-        "season_type": 2,
-        "title": "夏目友人帐",
-        "title_icon": "",
-        "traditional": "夏目友人帳",
-        "simplified": "夏目友人帐"
     },
     {
         "badge": "会员专享",
@@ -17534,28 +17534,6 @@
         "simplified": "TRINITY SEVEN 七人魔法使 剧场版 2"
     },
     {
-        "badge": "会员专享",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": "会员专享"
-        },
-        "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/a69ff3a007491415d2a6f00e753c657761bc2e3f.jpg",
-        "index_show": "2019-02-22上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss26823?theme=movie",
-        "media_id": 23369626,
-        "order": "19年3月开播",
-        "order_type": "pub_time",
-        "season_id": 26823,
-        "season_type": 2,
-        "title": "朝花夕誓",
-        "title_icon": "",
-        "traditional": "朝花夕誓",
-        "simplified": "朝花夕誓"
-    },
-    {
         "badge": "独家",
         "badge_info": {
             "bg_color": "#00C0FF",
@@ -18302,28 +18280,6 @@
         "title_icon": "",
         "traditional": "劇場版「 - Alice in the Garden -」",
         "simplified": "剧场版「 - Alice in the Garden -」"
-    },
-    {
-        "badge": "",
-        "badge_info": {
-            "bg_color": "#FB7299",
-            "bg_color_night": "#BB5B76",
-            "text": ""
-        },
-        "badge_type": 0,
-        "cover": "http://i0.hdslb.com/bfs/bangumi/75c7528cbf3254dd20a4512376ced74733ab98ef.jpg",
-        "index_show": "2018-08-24上映",
-        "is_finish": 1,
-        "link": "https://www.bilibili.com/bangumi/play/ss25944?theme=movie",
-        "media_id": 449528,
-        "order": "18年10月开播",
-        "order_type": "pub_time",
-        "season_id": 25944,
-        "season_type": 2,
-        "title": "黑子的篮球 LAST GAME",
-        "title_icon": "",
-        "traditional": "黑子的籃球 LAST GAME",
-        "simplified": "黑子的篮球 LAST GAME"
     },
     {
         "badge": "独家",
@@ -20394,11 +20350,11 @@
         "simplified": "琴之森"
     },
     {
-        "badge": "",
+        "badge": "会员专享",
         "badge_info": {
             "bg_color": "#FB7299",
             "bg_color_night": "#BB5B76",
-            "text": ""
+            "text": "会员专享"
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/976d13b93ba208e84eb0e22e0b7852edceef1eb8.jpg",
@@ -20416,11 +20372,11 @@
         "simplified": "甜甜私房猫 第四季 中配版"
     },
     {
-        "badge": "",
+        "badge": "会员专享",
         "badge_info": {
             "bg_color": "#FB7299",
             "bg_color_night": "#BB5B76",
-            "text": ""
+            "text": "会员专享"
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/976d13b93ba208e84eb0e22e0b7852edceef1eb8.jpg",
@@ -24802,7 +24758,7 @@
         },
         "badge_type": 0,
         "cover": "http://i0.hdslb.com/bfs/bangumi/image/71d54cae830d32a5af776dcc46632146fbdba868.jpg",
-        "index_show": "更新至第227话",
+        "index_show": "更新至第229话",
         "is_finish": 0,
         "link": "https://www.bilibili.com/bangumi/play/ss5978",
         "media_id": 5978,
@@ -30288,7 +30244,7 @@
         "order_type": "pub_time",
         "season_id": 28199,
         "season_type": 1,
-        "title": "JOJO的奇妙冒險 不滅鉆石（僅限台灣地區）",
+        "title": "JOJO的奇妙冒險 不滅鑽石（僅限台灣地區）",
         "title_icon": "",
         "traditional": "JOJO的奇妙冒險 不滅鑽石（僅限台灣地區）",
         "simplified": "JOJO的奇妙冒险 不灭钻石（仅限台湾地区）"
@@ -76844,6 +76800,182 @@
         "title_icon": "",
         "traditional": "米老鼠的黑白動畫片生涯",
         "simplified": "米老鼠的黑白动画片生涯"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/image/1ff20c208c205aa8eca2c3d849f4ac8f046514f8.jpg",
+        "index_show": "2019-09-13上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss28872?theme=movie",
+        "media_id": 28223276,
+        "order": "19年10月开播",
+        "order_type": "pub_time",
+        "season_id": 28872,
+        "season_type": 2,
+        "title": "名侦探柯南：绀青之拳",
+        "title_icon": "",
+        "traditional": "名偵探柯南：紺青之拳",
+        "simplified": "名侦探柯南：绀青之拳"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/5f921ab5be2bbb8359d9c70b1b1caa817ca18e80.jpg",
+        "index_show": "2019-06-01上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss28772?theme=movie",
+        "media_id": 28223068,
+        "order": "19年10月开播",
+        "order_type": "pub_time",
+        "season_id": 28772,
+        "season_type": 2,
+        "title": "哆啦A梦：大雄的月球探险记",
+        "title_icon": "",
+        "traditional": "哆啦A夢：大雄的月球探險記",
+        "simplified": "哆啦A梦：大雄的月球探险记"
+    },
+    {
+        "badge": "",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": ""
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/aff0dc6ea840c746c6401a08bf7aadc4bf8c5078.jpg",
+        "index_show": "2019-07-19上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss28381?theme=movie",
+        "media_id": 28222224,
+        "order": "19年8月开播",
+        "order_type": "pub_time",
+        "season_id": 28381,
+        "season_type": 2,
+        "title": "游戏人生 零",
+        "title_icon": "",
+        "traditional": "遊戲人生 零",
+        "simplified": "游戏人生 零"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/7f204779f418604cb2e6748d3b8fa04f72e5205a.jpg",
+        "index_show": "2019-05-17上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss28047?theme=movie",
+        "media_id": 28221478,
+        "order": "19年7月开播",
+        "order_type": "pub_time",
+        "season_id": 28047,
+        "season_type": 2,
+        "title": "企鹅公路",
+        "title_icon": "",
+        "traditional": "企鵝公路",
+        "simplified": "企鹅公路"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/af04aa78a528730ea2fc601f82b31a3b96b5ab29.jpg",
+        "index_show": "2019-05-24上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss28046?theme=movie",
+        "media_id": 28221477,
+        "order": "19年7月开播",
+        "order_type": "pub_time",
+        "season_id": 28046,
+        "season_type": 2,
+        "title": "龙珠超：布罗利",
+        "title_icon": "",
+        "traditional": "龍珠超：布羅利",
+        "simplified": "龙珠超：布罗利"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/3d0cc3fb367cc45ae4b2252b09d9f8d379b15a06.jpg",
+        "index_show": "2019-03-07上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss27990?theme=movie",
+        "media_id": 28221382,
+        "order": "19年6月开播",
+        "order_type": "pub_time",
+        "season_id": 27990,
+        "season_type": 2,
+        "title": "夏目友人帐",
+        "title_icon": "",
+        "traditional": "夏目友人帳",
+        "simplified": "夏目友人帐"
+    },
+    {
+        "badge": "会员专享",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": "会员专享"
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/a69ff3a007491415d2a6f00e753c657761bc2e3f.jpg",
+        "index_show": "2019-02-22上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss26823?theme=movie",
+        "media_id": 23369626,
+        "order": "19年3月开播",
+        "order_type": "pub_time",
+        "season_id": 26823,
+        "season_type": 2,
+        "title": "朝花夕誓",
+        "title_icon": "",
+        "traditional": "朝花夕誓",
+        "simplified": "朝花夕誓"
+    },
+    {
+        "badge": "",
+        "badge_info": {
+            "bg_color": "#FB7299",
+            "bg_color_night": "#BB5B76",
+            "text": ""
+        },
+        "badge_type": 0,
+        "cover": "http://i0.hdslb.com/bfs/bangumi/75c7528cbf3254dd20a4512376ced74733ab98ef.jpg",
+        "index_show": "2018-08-24上映",
+        "is_finish": 1,
+        "link": "https://www.bilibili.com/bangumi/play/ss25944?theme=movie",
+        "media_id": 449528,
+        "order": "18年10月开播",
+        "order_type": "pub_time",
+        "season_id": 25944,
+        "season_type": 2,
+        "title": "黑子的篮球 LAST GAME",
+        "title_icon": "",
+        "traditional": "黑子的籃球 LAST GAME",
+        "simplified": "黑子的篮球 LAST GAME"
     },
     {
         "badge": "",
